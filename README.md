@@ -1,4 +1,4 @@
-# lodash-codemods
+# lodash-codemods ![Node.js CI](https://github.com/huchenme/lodash-codemods/workflows/Node.js%20CI/badge.svg?branch=master)
 
 This repository contains a collection of codemod scripts for use with
 [JSCodeshift](https://github.com/facebook/jscodeshift).
