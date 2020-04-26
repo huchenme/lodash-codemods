@@ -3,17 +3,6 @@
 This repository contains a collection of codemod scripts for use with
 [JSCodeshift](https://github.com/facebook/jscodeshift).
 
-## Setup & Run
-
-```sh
-npm install -g jscodeshift
-git clone https://github.com/huchenme/lodash-codemods.git
-cd lodash-codemods
-jscodeshift -t <codemod-script> <file/folder>
-```
-
-Use the `-d` option for a dry-run and use `-p` to print the output for comparison.
-
 ## Included Scripts
 
 ### `named-import`
@@ -37,7 +26,7 @@ import { map, mapKeys } from 'lodash/fn';
 ```
 
 ```sh
-jscodeshift -t transforms/named-import.js <file/folder>
+npx jscodeshift -t transforms/named-import.js <file/folder>
 ```
 
 ### Recast Options
@@ -47,4 +36,12 @@ through the `printOptions` command line argument
 
 ```sh
 jscodeshift -t transforms/named-import.js <file/folder> --printOptions='{"quote":"double"}'
+```
+
+### Local Debugging
+
+Use the `-d` option for a dry-run and use `-p` to print the output for comparison.
+
+```sh
+npx jscodeshift -t transforms/named-import.js <file/folder> -d -p
 ```
