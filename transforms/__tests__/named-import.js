@@ -94,9 +94,9 @@ defineInlineTest(
   transform,
   {},
   `
-import map from 'lodash/fn/map';
-import mapKeys from 'lodash/fn/mapKeys';
-import { findLastIndex } from 'lodash/fn';
+import map from 'lodash/fp/map';
+import mapKeys from 'lodash/fp/mapKeys';
+import { findLastIndex } from 'lodash/fp';
 import something from 'something';
 import omit from 'lodash/omit';
 import camelCase from 'lodash/camelCase';
@@ -104,12 +104,12 @@ import { chunk } from 'lodash';
 import otherthing from 'otherthing';
   `,
   `
-import { findLastIndex, map, mapKeys } from 'lodash/fn';
+import { findLastIndex, map, mapKeys } from 'lodash/fp';
 import something from 'something';
 import { camelCase, chunk, omit } from 'lodash';
 import otherthing from 'otherthing';
   `,
-  'Mixed lodash with lodash/fn'
+  'Mixed lodash with lodash/fp'
 );
 
 defineInlineTest(

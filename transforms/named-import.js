@@ -55,10 +55,10 @@ export default function transformer(file, api, options) {
   transformToNamedExport(
     root,
     'lodash',
-    (value) => value.startsWith('lodash') && !value.startsWith('lodash/fn')
+    (value) => value.startsWith('lodash') && !value.startsWith('lodash/fp')
   );
-  transformToNamedExport(root, 'lodash/fn', (value) =>
-    value.startsWith('lodash/fn')
+  transformToNamedExport(root, 'lodash/fp', (value) =>
+    value.startsWith('lodash/fp')
   );
   return root.toSource(printOptions);
 }

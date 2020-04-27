@@ -14,15 +14,15 @@ from
 ```js
 import camelCase from 'lodash/camelCase';
 import omit from 'lodash/omit';
-import map from 'lodash/fn/map';
-import mapKeys from 'lodash/fn/mapKeys';
+import map from 'lodash/fp/map';
+import mapKeys from 'lodash/fp/mapKeys';
 ```
 
 to
 
 ```js
 import { camelCase, omit } from 'lodash';
-import { map, mapKeys } from 'lodash/fn';
+import { map, mapKeys } from 'lodash/fp';
 ```
 
 ```sh
